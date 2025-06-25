@@ -36,9 +36,9 @@
                 <div class="hero-text">
                     <h1 class="hero-title">When RajniCodes, Everything Obeys.</h1>
                     <p class="hero-subtitle">Connects to your favorite apps, understands your needs, completes your tasks.</p>
-                    <button class="cta-button primary" onclick="scrollToInstall()">
+                    <button class="cta-button primary" onclick="scrollToAuth()">
                         <span class="cta-icon">🚀</span>
-                        Install the Shortcut
+                        Get Started
                     </button>
                 </div>
                 <div class="hero-visual">
@@ -292,24 +292,85 @@
         </div>
     </section>
 
-    <!-- Final CTA Section -->
-    <section class="final-cta" id="install">
+    <!-- Authentication Section -->
+    <section class="auth-section" id="auth">
         <div class="container">
-            <div class="cta-content">
-                <h2 class="cta-title">Let Go of App Chaos</h2>
-                <p class="cta-subtitle">Say it once. Your tasks are done.</p>
-                <button class="cta-button primary glow">
-                    <span class="cta-icon">🚀</span>
-                    Install the Shortcut Life
-                </button>
+            <div class="auth-content">
+                <h2 class="auth-title">Join the RajniCodes Revolution</h2>
+                <p class="auth-subtitle">Experience the power of voice-first AI concierge</p>
+                
+                <!-- Auth Toggle Buttons -->
+                <div class="auth-toggle">
+                    <button class="auth-tab active" onclick="showAuthForm('signup')">Sign Up</button>
+                    <button class="auth-tab" onclick="showAuthForm('login')">Log In</button>
+                </div>
+
+                <!-- Sign Up Form -->
+                <div class="auth-form-container" id="signup-form">
+                    <form class="auth-form" onsubmit="handleSignup(event)">
+                        <div class="form-group">
+                            <input type="text" id="signup-name" placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="signup-email" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="signup-password" placeholder="Password" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="signup-confirm" placeholder="Confirm Password" required>
+                        </div>
+                        <button type="submit" class="auth-button primary">
+                            <span class="auth-icon">🚀</span>
+                            Create Account
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Log In Form -->
+                <div class="auth-form-container hidden" id="login-form">
+                    <form class="auth-form" onsubmit="handleLogin(event)">
+                        <div class="form-group">
+                            <input type="email" id="login-email" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="login-password" placeholder="Password" required>
+                        </div>
+                        <button type="submit" class="auth-button primary">
+                            <span class="auth-icon">🔑</span>
+                            Log In
+                        </button>
+                        <button type="button" class="forgot-password-btn" onclick="showForgotPassword()">
+                            Forgot Password?
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Forgot Password Form -->
+                <div class="auth-form-container hidden" id="forgot-form">
+                    <form class="auth-form" onsubmit="handleForgotPassword(event)">
+                        <h3 class="forgot-title">Reset Your Password</h3>
+                        <p class="forgot-subtitle">Enter your email to receive reset instructions</p>
+                        <div class="form-group">
+                            <input type="email" id="forgot-email" placeholder="Email Address" required>
+                        </div>
+                        <button type="submit" class="auth-button primary">
+                            <span class="auth-icon">📧</span>
+                            Send Reset Link
+                        </button>
+                        <button type="button" class="back-to-login-btn" onclick="showAuthForm('login')">
+                            ← Back to Log In
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Mobile Sticky CTA -->
     <div class="mobile-sticky-cta">
-        <button class="cta-button primary" onclick="scrollToInstall()">
-            Start the Easy Life Now
+        <button class="cta-button primary" onclick="scrollToAuth()">
+            Get Started Now
         </button>
     </div>
 

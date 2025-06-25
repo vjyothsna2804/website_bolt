@@ -592,27 +592,169 @@ h1, h2, h3 {
     font-weight: 500;
 }
 
-/* Final CTA Section */
-.final-cta {
+/* Authentication Section */
+.auth-section {
     padding: 5rem 0;
     background: linear-gradient(135deg, var(--magenta-pink) 0%, var(--fuchsia-purple) 100%);
-    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
-.cta-content {
+.auth-content {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
     color: var(--white);
 }
 
-.cta-title {
+.auth-title {
     font-size: 3rem;
     margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
 }
 
-.cta-subtitle {
+.auth-subtitle {
     font-size: 1.3rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 3rem;
     opacity: 0.9;
     font-weight: 500;
+}
+
+/* Auth Toggle */
+.auth-toggle {
+    display: flex;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    padding: 0.5rem;
+    margin-bottom: 3rem;
+    backdrop-filter: blur(10px);
+}
+
+.auth-tab {
+    flex: 1;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    background: transparent;
+    color: var(--white);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.auth-tab.active {
+    background: var(--neon-lime);
+    color: var(--charcoal-black);
+    box-shadow: 0 4px 15px rgba(192, 255, 71, 0.3);
+}
+
+/* Auth Forms */
+.auth-form-container {
+    transition: all 0.3s ease;
+}
+
+.auth-form-container.hidden {
+    display: none;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 1.2rem 1.5rem;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--neon-lime);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 20px rgba(192, 255, 71, 0.2);
+}
+
+/* Auth Buttons */
+.auth-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1.2rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.auth-button.primary {
+    background: var(--neon-lime);
+    color: var(--charcoal-black);
+    box-shadow: 0 4px 20px rgba(192, 255, 71, 0.3);
+}
+
+.auth-button.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(192, 255, 71, 0.5);
+}
+
+.auth-icon {
+    font-size: 1.2rem;
+}
+
+/* Forgot Password */
+.forgot-password-btn, .back-to-login-btn {
+    background: none;
+    border: none;
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-decoration: underline;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+    margin-top: 1rem;
+}
+
+.forgot-password-btn:hover, .back-to-login-btn:hover {
+    opacity: 1;
+}
+
+.forgot-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--white);
+}
+
+.forgot-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    opacity: 0.8;
+    color: var(--white);
 }
 
 /* Mobile Sticky CTA */
@@ -697,8 +839,12 @@ h1, h2, h3 {
         grid-template-columns: 1fr;
     }
     
-    .cta-title {
+    .auth-title {
         font-size: 2rem;
+    }
+    
+    .auth-content {
+        padding: 0 1rem;
     }
     
     .mobile-sticky-cta {
@@ -752,5 +898,23 @@ h1, h2, h3 {
     
     .brand-tagline {
         font-size: 0.8rem;
+    }
+    
+    .auth-title {
+        font-size: 1.8rem;
+    }
+    
+    .auth-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .auth-tab {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .form-group input {
+        padding: 1rem 1.2rem;
+        font-size: 0.9rem;
     }
 }
