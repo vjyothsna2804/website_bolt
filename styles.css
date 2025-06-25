@@ -1,0 +1,1117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --magenta-pink: #F72585;
+    --neon-lime: #C0FF47;
+    --fuchsia-purple: #9D4EDD;
+    --soft-blush: #FFF1F5;
+    --charcoal-black: #1B1B1B;
+    --white: #FFFFFF;
+    --skin-tone: #D4A574;
+    --hair-color: #2C1810;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--charcoal-black);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header and Sophisticated Animated Logo */
+.header {
+    background: var(--white);
+    padding: 1.5rem 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.animated-logo {
+    width: 120px;
+    height: 120px;
+    position: relative;
+    cursor: pointer;
+}
+
+.character-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    animation: masterPresence 4s ease-in-out infinite;
+}
+
+/* Character Head - More Sophisticated */
+.character-head {
+    width: 50px;
+    height: 55px;
+    position: absolute;
+    top: 10px;
+    left: 35px;
+    z-index: 10;
+}
+
+.hair-style {
+    width: 55px;
+    height: 35px;
+    background: linear-gradient(135deg, var(--hair-color) 0%, #1a0f08 100%);
+    border-radius: 30px 30px 15px 15px;
+    position: absolute;
+    top: -5px;
+    left: -2.5px;
+    box-shadow: inset 2px 2px 8px rgba(0,0,0,0.3);
+    animation: hairFlow 3s ease-in-out infinite;
+}
+
+.face {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(145deg, var(--skin-tone) 0%, #c49660 100%);
+    border-radius: 25px;
+    position: relative;
+    border: 2px solid var(--charcoal-black);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.eyes {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 8px 0;
+    position: relative;
+}
+
+.eye {
+    width: 8px;
+    height: 8px;
+    background: var(--white);
+    border-radius: 50%;
+    border: 1px solid var(--charcoal-black);
+    position: relative;
+    animation: eyeBlink 5s infinite;
+}
+
+.pupil {
+    width: 4px;
+    height: 4px;
+    background: var(--charcoal-black);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: eyeMovement 3s ease-in-out infinite;
+}
+
+.mustache {
+    width: 25px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--hair-color) 0%, #000 100%);
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.mouth {
+    width: 12px;
+    height: 6px;
+    background: #8B4513;
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0 0 6px 6px;
+    animation: mouthTalk 2s ease-in-out infinite;
+}
+
+/* Character Body - More Detailed */
+.character-body {
+    width: 60px;
+    height: 45px;
+    position: absolute;
+    top: 60px;
+    left: 30px;
+    z-index: 8;
+}
+
+.shirt {
+    width: 60px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--magenta-pink) 0%, var(--fuchsia-purple) 100%);
+    border-radius: 8px;
+    position: relative;
+    border: 2px solid var(--charcoal-black);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.collar {
+    width: 30px;
+    height: 8px;
+    background: var(--white);
+    position: absolute;
+    top: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 4px;
+    border: 1px solid var(--charcoal-black);
+}
+
+.arms {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.arm {
+    width: 18px;
+    height: 35px;
+    background: linear-gradient(145deg, var(--skin-tone) 0%, #c49660 100%);
+    border-radius: 9px;
+    position: absolute;
+    top: 5px;
+    border: 2px solid var(--charcoal-black);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.left-arm {
+    left: -15px;
+    animation: leftArmCommand 3s ease-in-out infinite;
+    transform-origin: top center;
+}
+
+.right-arm {
+    right: -15px;
+    animation: rightArmGesture 3s ease-in-out infinite;
+    transform-origin: top center;
+}
+
+.hand {
+    width: 12px;
+    height: 12px;
+    background: linear-gradient(145deg, var(--skin-tone) 0%, #c49660 100%);
+    border-radius: 50%;
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid var(--charcoal-black);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Floating Phone - More Realistic */
+.floating-phone {
+    width: 25px;
+    height: 45px;
+    position: absolute;
+    top: 25px;
+    right: 5px;
+    z-index: 15;
+    animation: phoneCommand 3s ease-in-out infinite;
+}
+
+.phone-body {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(145deg, var(--charcoal-black) 0%, #333 100%);
+    border-radius: 8px;
+    border: 2px solid var(--neon-lime);
+    box-shadow: 0 0 15px rgba(192, 255, 71, 0.5);
+    position: relative;
+}
+
+.phone-screen {
+    width: 19px;
+    height: 35px;
+    background: linear-gradient(145deg, var(--neon-lime) 0%, #a8e63a 100%);
+    border-radius: 4px;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    animation: screenPulse 2s ease-in-out infinite;
+}
+
+.app-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    padding: 3px;
+    height: 100%;
+}
+
+.mini-app {
+    background: var(--white);
+    border-radius: 2px;
+    animation: appActivate 2s ease-in-out infinite;
+}
+
+.mini-app:nth-child(1) { animation-delay: 0s; }
+.mini-app:nth-child(2) { animation-delay: 0.5s; }
+.mini-app:nth-child(3) { animation-delay: 1s; }
+.mini-app:nth-child(4) { animation-delay: 1.5s; }
+
+/* Magic Effects */
+.magic-sparkles {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 45px;
+    height: 65px;
+    pointer-events: none;
+}
+
+.sparkle {
+    width: 4px;
+    height: 4px;
+    background: var(--neon-lime);
+    border-radius: 50%;
+    position: absolute;
+    animation: sparkleFloat 2s ease-in-out infinite;
+    box-shadow: 0 0 6px var(--neon-lime);
+}
+
+.sparkle:nth-child(1) {
+    top: 10px;
+    left: 5px;
+    animation-delay: 0s;
+}
+
+.sparkle:nth-child(2) {
+    top: 25px;
+    right: 5px;
+    animation-delay: 0.7s;
+}
+
+.sparkle:nth-child(3) {
+    bottom: 10px;
+    left: 15px;
+    animation-delay: 1.4s;
+}
+
+/* Voice Command Waves */
+.voice-command {
+    position: absolute;
+    top: 35px;
+    left: -20px;
+    width: 50px;
+    height: 30px;
+    z-index: 5;
+}
+
+.sound-wave {
+    width: 20px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--magenta-pink) 0%, var(--fuchsia-purple) 100%);
+    border-radius: 2px;
+    position: absolute;
+    animation: soundWaveMove 1.5s ease-in-out infinite;
+    box-shadow: 0 0 4px var(--magenta-pink);
+}
+
+.sound-wave:nth-child(1) {
+    top: 8px;
+    left: 0;
+    animation-delay: 0s;
+}
+
+.sound-wave:nth-child(2) {
+    top: 13px;
+    left: 8px;
+    animation-delay: 0.3s;
+}
+
+.sound-wave:nth-child(3) {
+    top: 18px;
+    left: 0;
+    animation-delay: 0.6s;
+}
+
+/* Action Effects */
+.action-effects {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 20;
+}
+
+.lightning-bolt {
+    width: 3px;
+    height: 25px;
+    background: linear-gradient(180deg, var(--neon-lime) 0%, transparent 100%);
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    animation: lightningStrike 3s ease-in-out infinite;
+    box-shadow: 0 0 8px var(--neon-lime);
+}
+
+.energy-ring {
+    width: 80px;
+    height: 80px;
+    border: 2px solid var(--neon-lime);
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    animation: energyPulse 3s ease-in-out infinite;
+    opacity: 0;
+}
+
+/* Brand Info */
+.brand-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.brand-name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--magenta-pink);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    line-height: 1;
+}
+
+.brand-tagline {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--fuchsia-purple);
+    opacity: 0.9;
+    line-height: 1;
+}
+
+/* Sophisticated Animations */
+@keyframes masterPresence {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    25% { transform: scale(1.02) rotate(1deg); }
+    50% { transform: scale(1.05) rotate(0deg); }
+    75% { transform: scale(1.02) rotate(-1deg); }
+}
+
+@keyframes hairFlow {
+    0%, 100% { transform: scaleX(1); }
+    50% { transform: scaleX(1.05); }
+}
+
+@keyframes eyeBlink {
+    0%, 90%, 100% { transform: scaleY(1); }
+    95% { transform: scaleY(0.1); }
+}
+
+@keyframes eyeMovement {
+    0%, 100% { transform: translate(-50%, -50%); }
+    25% { transform: translate(-30%, -50%); }
+    75% { transform: translate(-70%, -50%); }
+}
+
+@keyframes mouthTalk {
+    0%, 100% { transform: translateX(-50%) scaleY(1); }
+    50% { transform: translateX(-50%) scaleY(1.3); }
+}
+
+@keyframes leftArmCommand {
+    0%, 100% { transform: rotate(-10deg); }
+    50% { transform: rotate(-45deg); }
+}
+
+@keyframes rightArmGesture {
+    0%, 100% { transform: rotate(10deg); }
+    50% { transform: rotate(35deg); }
+}
+
+@keyframes phoneCommand {
+    0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+    50% { transform: translateY(-8px) rotate(5deg) scale(1.1); }
+}
+
+@keyframes screenPulse {
+    0%, 100% { opacity: 0.9; }
+    50% { opacity: 1; }
+}
+
+@keyframes appActivate {
+    0%, 100% { background: var(--white); transform: scale(1); }
+    50% { background: var(--neon-lime); transform: scale(1.2); }
+}
+
+@keyframes sparkleFloat {
+    0%, 100% { transform: translateY(0px) scale(1); opacity: 1; }
+    50% { transform: translateY(-15px) scale(1.5); opacity: 0.7; }
+}
+
+@keyframes soundWaveMove {
+    0%, 100% { transform: translateX(0px) scaleX(1); opacity: 0.8; }
+    50% { transform: translateX(15px) scaleX(1.3); opacity: 1; }
+}
+
+@keyframes lightningStrike {
+    0%, 90%, 100% { opacity: 0; }
+    95% { opacity: 1; }
+}
+
+@keyframes energyPulse {
+    0%, 100% { transform: scale(0.8); opacity: 0; }
+    50% { transform: scale(1.2); opacity: 0.6; }
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--charcoal-black);
+}
+
+/* Buttons */
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.cta-button.primary {
+    background: var(--neon-lime);
+    color: var(--charcoal-black);
+    box-shadow: 0 4px 20px rgba(192, 255, 71, 0.3);
+}
+
+.cta-button.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(192, 255, 71, 0.5);
+}
+
+.cta-button.glow {
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 4px 20px rgba(192, 255, 71, 0.3);
+    }
+    to {
+        box-shadow: 0 8px 40px rgba(192, 255, 71, 0.6);
+    }
+}
+
+.cta-icon {
+    font-size: 1.2rem;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--magenta-pink) 0%, var(--neon-lime) 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    z-index: 2;
+}
+
+.hero-text {
+    color: var(--white);
+}
+
+.hero-title {
+    font-size: 4.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    line-height: 1.1;
+}
+
+.hero-subtitle {
+    font-size: 1.4rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+/* Phone Mockup */
+.phone-mockup {
+    width: 300px;
+    height: 600px;
+    background: var(--charcoal-black);
+    border-radius: 40px;
+    padding: 20px;
+    margin: 0 auto;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+.phone-screen {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, var(--fuchsia-purple), var(--magenta-pink));
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.voice-animation {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.voice-ring {
+    width: 80px;
+    height: 80px;
+    border: 3px solid var(--neon-lime);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulse 2s infinite;
+}
+
+.voice-ring:nth-child(2) {
+    animation-delay: 0.5s;
+    width: 100px;
+    height: 100px;
+}
+
+.voice-ring:nth-child(3) {
+    animation-delay: 1s;
+    width: 120px;
+    height: 120px;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1.5);
+    }
+}
+
+.app-icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.app-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--white);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+.app-icon:nth-child(2) { animation-delay: 0.5s; }
+.app-icon:nth-child(3) { animation-delay: 1s; }
+.app-icon:nth-child(4) { animation-delay: 1.5s; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Explainer Video Section */
+.explainer-video {
+    padding: 5rem 0;
+    background: var(--soft-blush);
+}
+
+.video-container {
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+}
+
+.video-placeholder {
+    aspect-ratio: 16/9;
+    background: linear-gradient(45deg, var(--fuchsia-purple), var(--magenta-pink));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.video-placeholder:hover {
+    transform: scale(1.02);
+}
+
+.play-button {
+    width: 80px;
+    height: 80px;
+    background: var(--neon-lime);
+    color: var(--charcoal-black);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.play-button:hover {
+    transform: scale(1.1);
+}
+
+.video-overlay h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.video-caption {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    color: var(--charcoal-black);
+    font-weight: 500;
+}
+
+/* Benefits Section */
+.benefits {
+    padding: 5rem 0;
+    background: var(--white);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.benefit-card {
+    background: var(--soft-blush);
+    padding: 2.5rem;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--magenta-pink);
+    box-shadow: 0 15px 40px rgba(247, 37, 133, 0.1);
+}
+
+.benefit-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.benefit-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--charcoal-black);
+}
+
+.benefit-card p {
+    color: var(--charcoal-black);
+    opacity: 0.8;
+    font-weight: 500;
+}
+
+/* How It Works Section */
+.how-it-works {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--soft-blush) 0%, var(--white) 100%);
+}
+
+.steps-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.step:hover {
+    transform: translateX(10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, var(--magenta-pink), var(--fuchsia-purple));
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.step-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--charcoal-black);
+}
+
+.step-content p {
+    color: var(--charcoal-black);
+    opacity: 0.8;
+    font-weight: 500;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 5rem 0;
+    background: var(--charcoal-black);
+    color: var(--white);
+}
+
+.testimonials .section-title {
+    color: var(--white);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--neon-lime);
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.user-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--neon-lime);
+}
+
+.user-info {
+    flex: 1;
+}
+
+.user-name {
+    font-weight: 600;
+    color: var(--neon-lime);
+    margin-bottom: 0.2rem;
+}
+
+.user-role {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.testimonial-quote {
+    font-size: 1.1rem;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+/* FAQ Section */
+.faq {
+    padding: 5rem 0;
+    background: var(--soft-blush);
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: var(--white);
+    margin-bottom: 1rem;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.faq-question {
+    padding: 1.5rem 2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    color: var(--charcoal-black);
+    transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+    background: var(--soft-blush);
+}
+
+.faq-toggle {
+    font-size: 1.5rem;
+    color: var(--magenta-pink);
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-toggle {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+}
+
+.faq-answer p {
+    padding: 0 2rem 1.5rem;
+    color: var(--charcoal-black);
+    opacity: 0.8;
+    font-weight: 500;
+}
+
+/* Final CTA Section */
+.final-cta {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--magenta-pink) 0%, var(--fuchsia-purple) 100%);
+    text-align: center;
+}
+
+.cta-content {
+    color: var(--white);
+}
+
+.cta-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.cta-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+    font-weight: 500;
+}
+
+/* Mobile Sticky CTA */
+.mobile-sticky-cta {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    padding: 1rem;
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+    z-index: 1000;
+    display: none;
+}
+
+.mobile-sticky-cta .cta-button {
+    width: 100%;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .logo-container {
+        justify-content: center;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .animated-logo {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .brand-name {
+        font-size: 1.8rem;
+    }
+    
+    .brand-tagline {
+        font-size: 0.9rem;
+    }
+    
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .hero-title {
+        font-size: 2.8rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .phone-mockup {
+        width: 250px;
+        height: 500px;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .benefit-card {
+        padding: 2rem;
+    }
+    
+    .step {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-title {
+        font-size: 2rem;
+    }
+    
+    .mobile-sticky-cta {
+        display: block;
+    }
+    
+    .faq-question {
+        font-size: 0.9rem;
+        padding: 1rem 1.5rem;
+    }
+    
+    .faq-answer p {
+        padding: 0 1.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .phone-mockup {
+        width: 200px;
+        height: 400px;
+    }
+    
+    .benefit-card {
+        padding: 1.5rem;
+    }
+    
+    .testimonial-card {
+        padding: 2rem;
+    }
+    
+    .step {
+        padding: 1.5rem;
+    }
+    
+    .brand-name {
+        font-size: 1.5rem;
+    }
+    
+    .brand-tagline {
+        font-size: 0.8rem;
+    }
+}
